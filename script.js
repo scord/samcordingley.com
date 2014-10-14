@@ -31,7 +31,10 @@ $(document).ready(function() {
 
     $("#" + currentPage).addClass("current");
 
-    swapImage(pageImage.src, 800);
+    if (currentPage == "about")
+        swapImage(pageImage.src, 2000);
+    else
+        swapImage(pageImage.src, 0);
 });
 
 $("#about").hover(function() {

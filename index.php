@@ -14,11 +14,16 @@
 
         <div id="bg-content">
             <div id="content">
-                <p>dsafsadflsjkalfd
-                dsafkljdsaklfas
-                sadfsdafsdafdsa
-                fdsafsadfasdf
-                asdfasdfasdfsda</p>
+                <h1> Hi, I'm Sam. </h1>
+                <p>I am a 19 year old web developer and Computer Science student at the University of Bristol
+                with a lot of programming experience and a passion for design.</p>
+                <p>I recently launched a website called <a href="http://www.heatmapnews.com">Heatmap News</a>
+                which gives you a quick overview of what is happening in the world right now.</p>
+                <p>Beyond the computer, my interests lie in music, motorsport and travel.</p>
+                <p>I love playing guitar, watching formula 1, rock climbing and kart racing.</p>
+                <p>Feel free to take a look at my CV <a href="/CurriculumVitae.pdf">here</a>.
+                    I am also open to freelance work in web design and development. Drop me an email at <a href="mailto:me@samcordingley.com" target="_top">
+        this address</a>.</p>
             </div>
         </div>
 

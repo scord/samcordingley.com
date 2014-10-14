@@ -14,8 +14,15 @@
 
         <div id="bg-content">
             <div id="content">
-                testing kdjasfliej i jieasclasej li ifjliasejc lisej ildajseiljalis jli jaslicejlas clidjcliajrlias cjliflas cjiel
+            <p>
+            Feel free to drop me an email at <a href="mailto:me@samcordingley.com" target="_top">
+this address</a>.
+            </p>
+            <p>
+            Or connect with me on <a href="http://uk.linkedin.com/pub/sam-cordingley/82/1ba/173/">linkedin</a>.
+        </p>
             </div>
+
         </div>
 
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

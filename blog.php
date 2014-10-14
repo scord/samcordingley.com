@@ -14,7 +14,8 @@
 
         <div id="bg-content">
             <div id="content">
-                testing kdjasfliej i jieasclasej li ifjliasejc lisej ildajseiljalis jli jaslicejlas clidjcliajrlias cjliflas cjiel
+                Feel free to drop me an email at <a href="mailto:me@samcordingley.com" target="_top">
+this address</a>.
             </div>
         </div>
 
