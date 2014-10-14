@@ -1,5 +1,5 @@
 <div id="bg-back" class="bg">
-    <img id="bg-back-image" src="images/bg.jpg">
+    <img id="bg-back-image" src="images/bgabout.jpg">
 </div>
 <div id="bg-front" class="bg">
     <img id="bg-front-image" src="images/bggrey.jpg">
@@ -13,8 +13,7 @@
     </ul>
     <ul id="nav">
         <li><a id="about" href="/">ABOUT</a></li>
-        <li><a id = "work" href="/work.php">WORK</a></li>
-        <li><a id = "contact" href="/contact.php">CONTACT</a></li>
-        <li><a id="blog" href="/blog.php">BLOG</a></li>
+        <li><a id="work" href="/work.php">WORK</a></li>
+        <li><a id="contact" href="/contact.php">CONTACT</a></li>
     </ul>
 </div>
