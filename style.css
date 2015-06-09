@@ -9,100 +9,142 @@ html {
 }
 
 body {
+    position: relative;
     width: 100%;
-    font-family: 'Raleway', sans-serif;
-    color: #dfdfdf;
+    font-family: 'Fjalla One', sans-serif;
+    color: #ffffff;
     height: 100%;
+    overflow: hidden;
 }
 
-p {
-    margin-top: 15px;
-}
+.l-panel-left {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 50%;
+  float: left;
 
-#thin {
-    font-weight: 100;
-}
 
-h1 {
-    font-size: 2em;
-}
-
-.bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-}
-
-.bg img {
-    position: fixed;
-    min-height: 100%;
-    width: 100%;
-}
-
-#header {
-    position: absolute;
-    z-index: 1;
-    height: 250px;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#nav {
-    float: right;
-}
-
-#title {
-    margin-top: 25px;
-    font-size: 5em;
-    width: 100%;
-    display: block;
-    text-align: center;
 
 }
 
-.button {
-    border: 2px solid #dfdfdf;
-    display: inline;
-    padding: 10px;
-    margin: 10px;
+
+
+.l-container {
+    padding: 40px 40px 40px 40px;
+    box-sizing: border-box;
 }
-.button:hover {
-    background-color: #dfdfdf !important;
-    color: #2d2c31;
+.slide {
+
+  width: 100%;
+
+  position: absolute;
+  overflow: scroll;
+  -webkit-transition-delay: 0s;
+  -webkit-transition-duration: 1.0s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease;
+
+}
+
+
+#img-heatmapnews {
+  background-image: url('images/heatmap.png');
+  background-size:   cover;                      /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 50px #000000;
+}
+
+#img-myenvironment {
+  background-image: url('images/myenv.png');
+  background-size:   cover;                      /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 50px #000000;
+}
+
+#pane-heatmap {
+    background-image: url('images/heatmap.jpg');
+}
+
+#pane-myenv {
+    background-image: url('images/myenv.jpg');
+}
+#pane-pocketshout {
+    background-image: url('images/pocketshout.jpg');
+}
+#pane-freezebox {
+    background-image: url('images/freezebox.jpg');
+}
+#pane-encapsulate {
+    background-image: url('images/encapsulate.jpg');
+}
+#pane-mandelbrot {
+    background-image: url('images/mandelbrot.jpg');
+}
+
+#pane-geddit {
+    background-image: url('images/geddit.jpg');
+}
+
+
+#home {
+  box-sizing: border-box;
+  padding: 20px 20px 20px 20px !important;
+  background-image: url('images/bg.jpg');
+  background-size:   cover;                      /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 200px #000000;
+}
+
+.pane:hover {
     cursor: pointer;
+    -webkit-filter: grayscale(0%);
+    -webkit-transition-delay: 0s;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-property: all;
+    -webkit-transition-timing-function: ease;
 }
 
-h2 {
-    font-family: 'Roboto Slab', serif;
-    font-size: 100px;
-    color: #32bef9;
+.pane {
+    font-family: 'Open Sans', sans-serif;
+  -webkit-filter: grayscale(90%);
+  height: 160px;
+  line-height: 160px;
+  width: 100%;
+  box-shadow: inset 0px 0px 50px #000000;
+  background-size:   cover;                      /* <------ */
+  background-repeat: no-repeat;
+  text-align: center;
+  font-size: 50px;
+  vertical-align: middle;
+  text-shadow: 0px 0px 50px #000000;
 }
 
-ul {
-    list-style-type: none;
+a:link {
+    color: #dfdfdf;
+    border-bottom: 5px solid transparent;
 }
 
-#content a {
-    text-decoration: underline;
+a:visited {
+    color: #dfdfdf;
 }
-#nav {
-    font-size: 2em;
-    position: absolute;
-    bottom: -5px;
-    width: 100%;
-    display: block;
-    text-align: center;
+
+a:hover {
+    color: #ffffff;
+}
+
+a:active {
+    color: #dfdfdf;
+}
+
+a:active {
+    color: #dfdfdf;
 }
 
 #links {
-    font-size: 2.5em;
-    position: absolute;
-    width: 100%;
+    font-size: 75px;
     list-style-type: none;
-    display: block;
+    display: inline;
     text-align: center;
 }
 
@@ -120,67 +162,85 @@ a {
     text-decoration: none;
 }
 
-#nav a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 0px 40px 0px 40px;
-    margin: 0px 20px 0px 20px;
-}
-
-#nav li {
-    display: inline;
-    width: 100px;
-}
-
-a:link {
-    color: #dfdfdf;
-    border-bottom: 5px solid transparent;
-}
-
-a:visited {
-    color: #dfdfdf;
-}
-
-a:hover {
-    color: #ffffff;
-}
-
-#nav a:hover {
-    border-bottom: 5px solid #ffffff  !important;
-}
-
-a:active {
-    color: #dfdfdf;
-}
-
-a:active {
-    color: #dfdfdf;
-}
-
 .current {
-    border-bottom: 5px solid #dfdfdf !important;
+  top: 0;
+  bottom: 0;
 }
 
-#bg-content {
-    width: 100%;
-    position: absolute;
-    padding: 0;
-    top:  250px;
-
-    background-color: rgba(55, 57, 57, 0.8);
-    border-top: 5px solid #454545;
-    -webkit-box-shadow: 0px 0px 40px 5px rgba(50, 50, 50, 1);
-    -moz-box-shadow:    0px 0px 40px 5px rgba(50, 50, 50, 1);
-    box-shadow:         0px 0px 40px 5px rgba(50, 50, 50, 1);
+.top {
+  bottom: 100%;
+  top: -100%;
 }
-#content {
 
-    font-size: 1.5em;
-    padding: 20px 0px 20px 0px;
-    position: relative;
-    width: 600px;
+.bottom {
+  bottom: -100%;
+  top: 100%;
+}
+
+#nav {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  font-weight: 100;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  list-style-type: none;
+}
+
+#nav li:hover{
+    cursor: pointer;
+}
+#nav li {
+  width: 23%;
+  padding: 0;
+  text-align: center;
+  display: inline-block;
+}
+
+#nav li+li {
+  border-left: 1px solid rgb(228, 228, 228);
+}
+
+#projects {
     height: 100%;
-    left: 50%;
-    margin-left: -300px;
+}
 
+#about {
+
+}
+.content {
+  font-family: 'Merriweather', serif;
+  color: rgb(117, 117, 117);
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 300;
+}
+
+.l-panel-right {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  float: right;
+
+  overflow: hidden;
+}
+
+h2 {
+  color: rgb(36, 36, 36);
+  margin: 20px 20px 20px 20px;
+  font-size: 100px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+h1 {
+  position: absolute;
+  bottom: 0px;
+  font-weight: 300;
+  font-size: 100px;
+  float: right;
+  margin-top: 200px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 50px #000000;
 }
