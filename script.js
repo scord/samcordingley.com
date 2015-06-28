@@ -14,7 +14,7 @@ $( '#button-about').click(function() {
         $('#about').removeClass("bottom");
         $('#about').addClass("current");
     }
-});
+})
 
 
 $( '#pane-heatmap').click(function() {

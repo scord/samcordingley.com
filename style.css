@@ -18,19 +18,11 @@ body {
   display: block;
   position: relative;
   height: 100%;
-  width: 30%;
+  width: 50%;
   float: left;
 }
-.triangle {
-  position: absolute;
-  width: 10%;
-  height: 100%;
-  left: 30%;
-  top: 0px;
-  background: linear-gradient(to right bottom, rgb(44, 62, 80) 50%, transparent 50%)
-}
 .l-container {
-  padding: 80px 80px 80px 80px;
+  padding: 40px 40px 40px 40px;
   box-sizing: border-box;
 }
 #img-heatmapnews {
@@ -122,6 +114,9 @@ a:active {
   color: #dfdfdf;
 }
 #links {
+  position: absolute;
+  vertical-align: middle;
+  width: 100%;
   font-size: 75px;
   list-style-type: none;
   display: inline;
@@ -172,7 +167,7 @@ a {
 .l-panel-right {
   position: relative;
   height: 100%;
-  width: 60%;
+  width: 50%;
   float: right;
   overflow: hidden;
 }
@@ -185,11 +180,9 @@ p {
   margin-bottom: 20px;
 }
 h1 {
-  position: absolute;
-  bottom: 0px;
+  text-align: center;
   font-weight: 300;
-  font-size: 80px;
-  float: right;
+  font-size: 100px;
   margin-top: 200px;
   color: rgb(255, 255, 255);
 }

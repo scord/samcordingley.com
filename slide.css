@@ -11,6 +11,8 @@
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
 }
+
+
 .current {
   top: 0;
   bottom: 0;
