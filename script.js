@@ -1,42 +1,74 @@
 
-$( '#button-projects' ).click(function() {
-    $('#projects').removeClass("top");
-    $('#projects').addClass("current");
-    $('#about').removeClass("current");
-    $('#about').addClass("bottom");
-});
 
-$( '#button-about').click(function() {
-    current = $('.l-panel-right .current');
-    if (!current.is('#about')) {
-        current.removeClass("current");
-        current.addClass("top");
-        $('#about').removeClass("bottom");
-        $('#about').addClass("current");
+
+
+
+var currentPage;
+var pageImage, greyImage, aboutImage, workImage, contactImage, blogImage;
+
+$(document).ready(function() {
+    aboutImage = new Image();
+    workImage = new Image();
+    contactImage = new Image();
+    blogImage = new Image();
+    pageImage = new Image();
+    greyImage = new Image();
+
+    currentUrl = location.pathname;
+
+    greyImage.src = "images/bggrey.jpg";
+    aboutImage.src = "images/bgabout.jpg";
+    workImage.src = "images/bgwork.jpg";
+    contactImage.src = "images/bgcontact.jpg";
+    blogImage.src = "images/bgblog.jpg";
+
+    currentPage = currentUrl.replace("/", "").replace(".php", "");
+    if (currentPage == "") {
+        currentPage = "about";
     }
-})
 
+    pageImage.src = "images/bg" + currentPage + ".jpg";
 
-$( '#pane-heatmap').click(function() {
-  $('#img-heatmapnews').removeClass("top");
-  $('#img-heatmapnews').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
+    $("#" + currentPage).addClass("current");
 
-  $('#heatmapnews').removeClass("bottom");
-  $('#heatmapnews').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
+    if (currentPage == "about")
+        swapImage(pageImage.src, 2000);
+    else
+        swapImage(pageImage.src, 0);
 });
 
-$( '#pane-myenv').click(function() {
-  $('#img-myenvironment').removeClass("top");
-  $('#img-myenvironment').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#myenvironment').removeClass("bottom");
-  $('#myenvironment').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
+$("#about").hover(function() {
+    swapImage(aboutImage.src, 800);
+}, function() {
+    swapImage(pageImage.src, 0);
 });
+
+$("#work").hover(function() {
+    swapImage(workImage.src, 800);
+}, function() {
+    swapImage(pageImage.src, 0);
+});
+
+$("#contact").hover(function() {
+    swapImage(contactImage.src, 800);
+}, function() {
+    swapImage(pageImage.src, 0);
+});
+
+$("#blog").hover(function() {
+    swapImage(blogImage.src, 800);
+}, function() {
+    swapImage(pageImage.src, 0);
+});
+
+
+function swapImage(src, time) {
+    $("#bg-back-image").attr("src", src);
+
+    $("#bg-front").fadeOut(time, function() {
+        $("#bg-front-image").attr("src", $("#bg-back-image").attr("src"));
+        $("#bg-front").css({display: 'block', opacity: 1});
+    });
+
+
+}
