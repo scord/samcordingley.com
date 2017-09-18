@@ -17,12 +17,13 @@ body {
 .l-panel-left {
   display: block;
   position: relative;
+   box-sizing: border-box;
   height: 100%;
   width: 50%;
   float: left;
 }
 .l-container {
-  padding: 40px 40px 40px 40px;
+padding: 40px 40px 40px 40px;
   box-sizing: border-box;
 }
 #img-heatmapnews {
@@ -39,8 +40,76 @@ body {
   background-repeat: no-repeat;
   box-shadow: inset 0px 0px 50px #000000;
 }
+#img-lightfield {
+  background-image: url('images/lightfield2.png');
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 50px #000000;
+}
+#pane-lightfield {
+  background-image: url('images/lightfield.png');
+}
+
+#img-rasteriser{
+  background-image: url('images/rasteriser.jpg');
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 50px #000000;
+}
+#pane-rasteriser{
+  background-image: url('images/rasteriser.jpg');
+}
+
+#img-raytracer{
+  background-image: url('images/raytracer.jpg');
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 50px #000000;
+}
+#pane-raytracer{
+  background-image: url('images/raytracer.jpg');
+}
+
+#img-robot{
+  background-image: url('images/robot.jpg');
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 50px #000000;
+}
+#pane-robot{
+  background-image: url('images/robot.jpg');
+}
+
+
+#img-animation{
+  background-image: url('images/animation.png');
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 50px #000000;
+}
+#pane-animation{
+  background-image: url('images/animation.png');
+}
+
+
+#img-tombofterror {
+  background-image: url('images/tombofterror.jpg');
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 50px #000000;
+}
 #pane-heatmap {
   background-image: url('images/heatmap.jpg');
+}
+
+#pane-tombofterror {
+  background-image: url('images/tombofterror.jpg');
 }
 #pane-myenv {
   background-image: url('images/myenv.jpg');
@@ -57,13 +126,18 @@ body {
 #pane-mandelbrot {
   background-image: url('images/mandelbrot.jpg');
 }
-#pane-geddit {
-  background-image: url('images/geddit.jpg');
+
+#img-freezebox{
+  background-image: url('images/freezebox.jpg');
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 50px #000000;
 }
 #home {
   box-sizing: border-box;
-  padding: 20px 20px 20px 20px !important;
-  background-color: rgb(44, 62, 80);
+  padding: 20px 00px 20px 00px !important;
+  background-image: url("images/bgabout2.jpg");
   background-size: cover;
   /* <------ */
   background-repeat: no-repeat;
@@ -82,6 +156,7 @@ body {
           transition-timing-function: ease;
 }
 .pane {
+
   font-family: 'Open Sans', sans-serif;
   -webkit-filter: grayscale(90%);
           filter: grayscale(90%);
@@ -130,16 +205,25 @@ a:active {
 #links li {
   display: inline;
 }
+li a {
+  text-decoration: none;
+}
+li a:link {
+  text-decoration: none;
+  color: white;
+}
 a {
   text-decoration: none;
 }
 #nav {
   font-family: 'Open Sans', sans-serif;
-  width: 100%;
+
   font-weight: 100;
   color: rgb(255, 255, 255);
   font-size: 14px;
   list-style-type: none;
+  vertical-align: middle;
+  text-align: center;
 }
 #nav li:hover {
   cursor: pointer;
