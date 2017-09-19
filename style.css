@@ -228,6 +228,12 @@ a {
 #nav li:hover {
   cursor: pointer;
 }
+.button-back {
+  width: 100px;
+}
+.button-back:hover{
+  cursor: pointer;
+}
 #nav li {
   width: 23%;
   padding: 0;

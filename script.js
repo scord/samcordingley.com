@@ -16,6 +16,22 @@ $( '#button-about').click(function() {
     }
 })
 
+$( '.button-back').click(function() {
+    current = $('.l-panel-right .current');
+    currentLeft =  $('.l-panel-left .current');
+    if (!current.is('#about')) {
+        current.removeClass("current");
+        current.addClass("top");
+        $('#projects').removeClass("bottom");
+        $('#projects').addClass("current");
+
+        currentLeft.removeClass("current");
+        currentLeft.addClass("bottom");
+        $('#home').removeClass("top");
+        $('#home').addClass("current");
+    }
+})
+
 
 $( '#pane-heatmap').click(function() {
   $('#img-heatmapnews').removeClass("top");
