@@ -23,8 +23,27 @@ body {
   float: left;
 }
 .l-container {
-padding: 40px 40px 40px 40px;
+
   box-sizing: border-box;
+
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  margin: auto;
+}
+
+.slide {
+  width: 100%;
+  margin: auto;
+  vertical-align: middle;
+}
+#img-cryptoconomy {
+  background-image: url('images/crypto.jpg');
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 50px #000000;
 }
 #img-heatmapnews {
   background-image: url('images/heatmap.png');
@@ -104,14 +123,18 @@ padding: 40px 40px 40px 40px;
   background-repeat: no-repeat;
   box-shadow: inset 0px 0px 50px #000000;
 }
-#pane-heatmap {
+#pane-cryptoconomy {
+  background-image: url('images/crypto.jpg');
+}
+
+#pane-heatmapnews {
   background-image: url('images/heatmap.jpg');
 }
 
 #pane-tombofterror {
   background-image: url('images/tombofterror.jpg');
 }
-#pane-myenv {
+#pane-myenvironment {
   background-image: url('images/myenv.jpg');
 }
 #pane-pocketshout {
@@ -136,7 +159,7 @@ padding: 40px 40px 40px 40px;
 }
 #home {
   box-sizing: border-box;
-  padding: 20px 00px 20px 00px !important;
+
   background-image: url("images/bgabout2.jpg");
   background-size: cover;
   /* <------ */
@@ -173,28 +196,30 @@ padding: 40px 40px 40px 40px;
   text-shadow: 0px 0px 50px #000000;
 }
 a:link {
-  color: #dfdfdf;
+  color: rgb(83, 172, 210);
   border-bottom: 5px solid transparent;
 }
 a:visited {
   color: #dfdfdf;
 }
 a:hover {
-  color: #ffffff;
+  color: #dfdfdf;
 }
 a:active {
-  color: #dfdfdf;
+  color:#dfdfdf;
 }
 a:active {
   color: #dfdfdf;
 }
 #links {
-  position: absolute;
+
   vertical-align: middle;
+  padding: 0;
   width: 100%;
+
   font-size: 75px;
   list-style-type: none;
-  display: inline;
+  display:  block;
   text-align: center;
 }
 #links a {
@@ -210,6 +235,9 @@ li a {
 }
 li a:link {
   text-decoration: none;
+  color: #dfdfdf;
+}
+li a:hover {
   color: white;
 }
 a {
@@ -219,14 +247,15 @@ a {
   font-family: 'Open Sans', sans-serif;
 
   font-weight: 100;
-  color: rgb(255, 255, 255);
-  font-size: 14px;
+  color: #dfdfdf;
+  font-size: 16px;
   list-style-type: none;
   vertical-align: middle;
   text-align: center;
 }
 #nav li:hover {
   cursor: pointer;
+  color: white;
 }
 .button-back {
   width: 100px;
@@ -241,6 +270,9 @@ a {
   display: inline-block;
 }
 #nav li+li {
+  border-left: 1px solid rgb(228, 228, 228);
+}
+#nav a{
   border-left: 1px solid rgb(228, 228, 228);
 }
 #projects {
@@ -273,6 +305,6 @@ h1 {
   text-align: center;
   font-weight: 300;
   font-size: 100px;
-  margin-top: 200px;
+  margin-top: 20px;
   color: rgb(255, 255, 255);
 }

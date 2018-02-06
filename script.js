@@ -32,8 +32,22 @@ $( '.button-back').click(function() {
     }
 })
 
+projects = ['heatmapnews', 'lightfield', 'tombofterror', 'rasteriser', 'raytracer', 'robot', 'animation', 'freezebox', 'geddit', 'myenvironment']
 
-$( '#pane-heatmap').click(function() {
+$( '#pane-cryptoconomy').click(function() {
+  $('#img-cryptoconomy').removeClass("top");
+  $('#img-cryptoconomy').addClass("current");
+  $('#projects').removeClass("current");
+  $('#projects').addClass("bottom");
+
+  $('#cryptoconomy').removeClass("bottom");
+  $('#cryptoconomy').addClass("current");
+  $('#home').removeClass("current");
+  $('#home').addClass("top");
+});
+
+
+$( '#pane-heatmapnews').click(function() {
   $('#img-heatmapnews').removeClass("top");
   $('#img-heatmapnews').addClass("current");
   $('#projects').removeClass("current");
@@ -150,7 +164,7 @@ $( '#pane-geddit').click(function() {
 
 
 
-$( '#pane-myenv').click(function() {
+$( '#pane-myenvironment').click(function() {
   $('#img-myenvironment').removeClass("top");
   $('#img-myenvironment').addClass("current");
   $('#projects').removeClass("current");
