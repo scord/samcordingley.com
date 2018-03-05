@@ -1,14 +1,14 @@
 var params = {
 	gravityPositionX: 0.0,
 	gravityPositionY: 0.0,
-	pointSize: 0.0,
+	pointSize: 20.0,
 	cameraPositionZ: 5.0,
-	pointBrightness: 0.8,
+	pointBrightness: 1.0,
 	pointIntensity: 1.0,
 	simulationSpeed: 0.1,
 	followMouse: false,
 	size: 1024,
-	pointColour: { h: 200, s: 0.7, v: 0.2 }
+	pointColour: { h: 200, s: 0.7, v: 0.8 }
 };
 
 var camera, count = 0, scene, renderer, clock = new THREE.Clock(), container;
@@ -67,7 +67,7 @@ function init() {
   const ASPECT = WIDTH / HEIGHT;
   const NEAR = 0.1;
   const FAR = 10000;
-	const SIZE = 1024;
+	const SIZE = 128;
 
 	clock.start();
 
@@ -109,7 +109,7 @@ function initGPUCompute(size) {
 
 	var initialVelocityTexture = gpuCompute.createTexture();
 	var pixels = initialVelocityTexture.image.data;
-	var scale = 0.00001;
+	var scale = 0.001;
 
 	for (x = 0; x < gpuCompute.size; x++) {
 		for (y = 0; y < gpuCompute.size; y++) {
