@@ -3,15 +3,20 @@
 
     <head>
         <title>Sam Cordingley</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="slide.css">
+        <script src="three.min.js" type="text/javascript"></script>
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Domine|Fjalla+One|Open+Sans:100,400,700,600|Merriweather' rel='stylesheet' type='text/css'>    </head>
+        <script src="GPUCompute.js" type="text/javascript"></script>
+        <script src="snoise2d.js" type="text/javascript"></script>
 
     <body>
 
         <div class="l-panel-left">
             <div class="current slide" id="home">
+                <div id="home-background"></div>
                 <div class='l-container'>
                     <ul class="l-rotate" id="nav">
                         <li id="button-about">ABOUT ME</li>
@@ -23,92 +28,12 @@
                     <ul id="links">
         <li><a href="http://www.github.com/scord"><i class="fa fa-github"></i></a></li>
         <li><a href="http://uk.linkedin.com/pub/sam-cordingley/82/1ba/173/"><i class="fa fa-linkedin"></i></a></li>
-    
+
     </ul>
   </div>
 
             </div>
-            <div class="bottom slide" id="cryptoconomy">
-                <div class="l-container">
-                    <div class="content">
-                      <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
-                      <p>In development. Cryptoconomy is a website that shows cryptocurrency news on a globe, giving time and location context to the articles. The globe features a real-time accurate sunlight system, modelling the actual current position of the sun to light the globe correctly.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom slide" id="heatmapnews">
-                <div class="l-container">
-                    <div class="content">
-                      <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
-                      <p>Heatmap News is a website that displays the most important world news stories on a map of the Earth. It lets you quickly see what is happening in the world right now. The front-end was developed with HTML/CSS/JavaScript/jQuery while the back-end was developed with Python/Django. The website is no longer active but received press coverage <a href="https://goo.gl/kuZ1qZ">here</a>.</p>
-                    </div>
-                </div>
-            </div>
-             <div class="bottom slide" id="lightfield">
-                <div class="l-container">
-                    <div class="content">
-                      <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
-                      <p>I wrote my MEng dissertation on "Light Field Rendering for Real-time Applications" and developed a system for capturing light fields of Autodesk Maya scenes with Pixar's RenderMan and rendering them in real-time within Unreal Engine 4. <a href="dissertation.pdf">Read the dissertation here.</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom slide" id="rasteriser">
-                <div class="l-container">
-                    <div class="content">
-                      <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
-                      <p>I developed a rasterisation graphics engine using C++. It's features include shadows and bump mapping.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom slide" id="raytracer">
-                <div class="l-container">
-                    <div class="content">
-                      <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
-                      <p>I developed a raytracer graphics engine using C++. It's features include textures, shadows, and reflections.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom slide" id="robot">
-                <div class="l-container">
-                    <div class="content">
-                      <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
-                      <p>I designed and created a complex 3D model of a robot. The model was created using Autodesk Maya.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="bottom slide" id="animation">
-                <div class="l-container">
-                    <div class="content">
-                      <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
-                      <p>I created an animation of a dancing robot using Autodesk Maya. You can watch the videos <a href=https://www.youtube.com/watch?v=zq4TXOm3G5M>here</a> and <a href=https://www.youtube.com/watch?v=sPlKOZ4w3UU>here</a>. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom slide" id="tombofterror">
-                <div class="l-container">
-                    <div class="content">
-                      <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
-                      <p>I spent a year as the lead programmer of a group of seven developing a multiplayer virtual reality game for the Oculus Rift DK2 called Tomb of Terror. The game worked around an echolocation mechanic where sound was visualised as glowing waves propagating throughout the room. I built the echolocation mechanic using a combination of C# and GLSL within the Unity game engine. Click <a href="https://www.youtube.com/watch?v=sU5LFoEexTo">here</a> and <a href="https://www.youtube.com/watch?time_continue=17&v=CHCnagA5_CY">here</a> for videos demonstrating the sound vision shader. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom slide" id="myenvironment">
-                <div class="l-container">
-                    <div class="content">
-                      <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
-                      <p>Worked with the Environment Agency to replace their 'What's in your backyard' service with a modern cross-platform mobile app. Specifically, I worked on the back-end system, providing environmental data for the app. I also helped implement Android specific features on the front-end. (http://samcordingley.com/ea/)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom slide" id="freezebox">
-                <div class="l-container">
-                    <div class="content">
-                      <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
-                      <p>I developed a game in 48 hours for the Ludum Dare game jam competition. The game is a platformer in which you control a box which freezes after 10 seconds. After the box has frozen a new box spawns, this allows you to progress through the level by positioning your boxes before the 10 seconds runs out. Download the game <a href=http://ludumdare.com/compo/ludum-dare-27/?action=preview&uid=26905>here</a>. </p>
-                    </div>
-                </div>
-            </div>
 
         </div>
 
@@ -116,82 +41,14 @@
 
         <div class="l-panel-right">
 
-            <div class="top slide" id="img-cryptoconomy">
-                <div class="l-container">
-                    <h1>CRYPTOCONOMY</h1>
-                </div>
-            </div>
 
-
-            <div class="top slide" id="img-heatmapnews">
-                <div class="l-container">
-                    <h1>HEATMAP NEWS</h1>
-                </div>
-            </div>
-
-            <div class="top slide" id="img-lightfield">
-                <div class="l-container">
-                    <h1>LIGHT FIELD RENDERING</h1>
-                </div>
-            </div>
-
-            <div class="top slide" id="img-rasteriser">
-                <div class="l-container">
-                    <h1>C++ RASTERISER</h1>
-                </div>
-            </div>
-
-            <div class="top slide" id="img-raytracer">
-                <div class="l-container">
-                    <h1>C++ RAYTRACER</h1>
-                </div>
-            </div>
-
-            <div class="top slide" id="img-robot">
-                <div class="l-container">
-                    <h1>ROBOT 3D MODEL</h1>
-                </div>
-            </div>
-
-            <div class="top slide" id="img-animation">
-                <div class="l-container">
-                    <h1>DANCE ANIMATION</h1>
-                </div>
-            </div>
-
-            <div class="top slide" id="img-tombofterror">
-                <div class="l-container">
-                    <h1>TOMB OF TERROR</h1>
-                </div>
-            </div>
-
-            <div class="top slide" id="img-myenvironment">
-                <div class="l-container">
-                    <h1>MY ENIVIRONMENT</h1>
-                </div>
-            </div>
-
-             <div class="top slide" id="img-freezebox">
-                <div class="l-container">
-                    <h1>FREEZE BOX</h1>
-                </div>
-            </div>
 
 
 
 
 
             <div class="top slide" id="projects">
-                <div id="pane-cryptoconomy" class="pane">CRYPTOCONOMY</div>
-                <div id="pane-lightfield" class="pane">LIGHT FIELD RENDERING</div>
-                <div id="pane-tombofterror" class="pane">TOMB OF TERROR</div>
-                <div id="pane-rasteriser" class="pane">C++ RASTERISER</div>
-                <div id="pane-raytracer" class="pane">C++ RAYTRACER</div>
-                <div id="pane-heatmapnews" class="pane">HEATMAP NEWS</div>
-                <div id="pane-animation" class="pane">DANCE ANIMATION</div>
-                <div id="pane-robot" class="pane">ROBOT 3D MODEL</div>
-                <div id="pane-myenvironment" class="pane">MYENVIRONMENT</div>
-                <div id="pane-freezebox" class="pane">FREEZE BOX</div>
+
 
             </div>
 
@@ -200,15 +57,16 @@
                     <h2>ABOUT ME</h2>
 
                     <div class="content">
-                        <p>Hello! I'm a recent Computer Science graduate with experience in software development and a passion for art. Although I love to develop software, I also love drawing, painting, and photography. I am fascinated by film production and the intersection of creativity and computer science. </p>
+                        <p>Hello! I'm a recent Computer Science graduate with experience in software development and a passion for art. Although I love to develop software, I also love drawing, painting, and photography. I am fascinated by computer graphics and the intersection of creativity and computer science. </p>
                     </div>
                 </div>
             </div>
         </div>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="oridomi.min.js"></script>
+        <script type="text/javascript" src="projects.js"></script>
         <script type="text/javascript" src="script.js"></script>
-
+        <script src="particles.js" type="text/javascript"></script>
     </body>
 
 </html>

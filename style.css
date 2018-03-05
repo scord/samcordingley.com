@@ -25,24 +25,39 @@ body {
 .l-container {
 
   box-sizing: border-box;
-
+  overflow-x:hidden;
   top: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
   margin: auto;
 }
-
+#home-background {
+  height:100%;
+  overflow: hidden;
+  width:100%;
+  background-color: black;
+  position:absolute;
+}
 .slide {
   width: 100%;
+
   margin: auto;
   vertical-align: middle;
+  background-size: cover;
+  background-position: center;
+    background-repeat: no-repeat;
 }
+
+h1 {
+  text-transform: uppercase;
+}
+
 #img-cryptoconomy {
   background-image: url('images/crypto.jpg');
-  background-size: cover;
+
   /* <------ */
-  background-repeat: no-repeat;
+
   box-shadow: inset 0px 0px 50px #000000;
 }
 #img-heatmapnews {
@@ -188,8 +203,9 @@ body {
   width: 100%;
   box-shadow: inset 0px 0px 50px #000000;
   background-size: cover;
-  /* <------ */
+
   background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   font-size: 50px;
   vertical-align: middle;
@@ -241,10 +257,23 @@ li a:hover {
   color: #dfdfdf;
 }
 a {
+  color:rgb(84, 165, 200);
   text-decoration: none;
 }
+
+a:active {
+  color:rgb(84, 165, 200);
+}
+
+a:visited {
+  color:rgb(84, 165, 200);
+}
+
+a:hover {
+  color:rgb(156, 236, 238);
+}
 #nav {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   font-weight: 100;
   color: #dfdfdf;
@@ -295,7 +324,7 @@ a {
 }
 #about {}
 .content {
-  font-family: 'Merriweather', serif;
+  font-family: 'Roboto', sans-serif;
   color: rgb(117, 117, 117);
   font-size: 18px;
   line-height: 35px;

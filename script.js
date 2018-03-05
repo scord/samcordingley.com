@@ -1,4 +1,49 @@
 
+
+
+
+
+
+function goToPage(img, page) {
+  return function() {
+  $(img).removeClass("top");
+  $(img).addClass("current");
+  $('#projects').removeClass("current");
+  $('#projects').addClass("bottom");
+
+  $(page).removeClass("bottom");
+  $(page).addClass("current");
+  $('#home').removeClass("current");
+  $('#home').addClass("top");
+}
+}
+
+for (var i = 0; i < projects.length; i++) {
+  
+  pageDiv = `<div class="bottom slide" id="project`+i+`">` + `
+      <div class="l-container">
+          <div class="content">
+            <h2 class="button-back"><i class="fa fa-chevron-up" aria-hidden="true"></i></h2>
+            <p>`+projects[i][2]+`</p>
+          </div>
+      </div>
+  </div>`
+
+  paneDiv = `<div id="pane-project`+i+`" class="pane" style="background-image: url('images/`+projects[i][1]+`')">`+projects[i][0]+`</div>`
+
+  imgDiv = `<div class="top slide" style="background-image: url('images/`+projects[i][1]+`')" id="img-project`+i+`">
+        <div class="l-container">
+            <h1>`+projects[i][0]+`</h1>
+        </div>
+    </div>`
+
+  $(".l-panel-left").append(pageDiv);
+  $(".l-panel-right").append(imgDiv);
+  $("#projects").append(paneDiv);
+
+  $('#pane-project'+i).click(goToPage('#img-project'+i, '#project'+i));
+}
+
 $( '#button-projects' ).click(function() {
     $('#projects').removeClass("top");
     $('#projects').addClass("current");
@@ -19,6 +64,7 @@ $( '#button-about').click(function() {
 $( '.button-back').click(function() {
     current = $('.l-panel-right .current');
     currentLeft =  $('.l-panel-left .current');
+
     if (!current.is('#about')) {
         current.removeClass("current");
         current.addClass("top");
@@ -31,147 +77,3 @@ $( '.button-back').click(function() {
         $('#home').addClass("current");
     }
 })
-
-projects = ['heatmapnews', 'lightfield', 'tombofterror', 'rasteriser', 'raytracer', 'robot', 'animation', 'freezebox', 'geddit', 'myenvironment']
-
-$( '#pane-cryptoconomy').click(function() {
-  $('#img-cryptoconomy').removeClass("top");
-  $('#img-cryptoconomy').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#cryptoconomy').removeClass("bottom");
-  $('#cryptoconomy').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});
-
-
-$( '#pane-heatmapnews').click(function() {
-  $('#img-heatmapnews').removeClass("top");
-  $('#img-heatmapnews').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#heatmapnews').removeClass("bottom");
-  $('#heatmapnews').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});
-
-$( '#pane-lightfield').click(function() {
-  $('#img-lightfield').removeClass("top");
-  $('#img-lightfield').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#lightfield').removeClass("bottom");
-  $('#lightfield').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});
-
-$( '#pane-tombofterror').click(function() {
-  $('#img-tombofterror').removeClass("top");
-  $('#img-tombofterror').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#tombofterror').removeClass("bottom");
-  $('#tombofterror').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});
-
-$( '#pane-rasteriser').click(function() {
-  $('#img-rasteriser').removeClass("top");
-  $('#img-rasteriser').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#rasteriser').removeClass("bottom");
-  $('#rasteriser').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});
-
-
-$( '#pane-raytracer').click(function() {
-  $('#img-raytracer').removeClass("top");
-  $('#img-raytracer').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#raytracer').removeClass("bottom");
-  $('#raytracer').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});
-
-
-$( '#pane-robot').click(function() {
-  $('#img-robot').removeClass("top");
-  $('#img-robot').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#robot').removeClass("bottom");
-  $('#robot').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});
-
-$( '#pane-animation').click(function() {
-  $('#img-animation').removeClass("top");
-  $('#img-animation').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#animation').removeClass("bottom");
-  $('#animation').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});
-
-$( '#pane-freezebox').click(function() {
-  $('#img-freezebox').removeClass("top");
-  $('#img-freezebox').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#freezebox').removeClass("bottom");
-  $('#freezebox').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});
-
-
-
-$( '#pane-geddit').click(function() {
-  $('#img-geddit').removeClass("top");
-  $('#img-geddit').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#geddit').removeClass("bottom");
-  $('#geddit').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});
-
-
-
-
-
-
-$( '#pane-myenvironment').click(function() {
-  $('#img-myenvironment').removeClass("top");
-  $('#img-myenvironment').addClass("current");
-  $('#projects').removeClass("current");
-  $('#projects').addClass("bottom");
-
-  $('#myenvironment').removeClass("bottom");
-  $('#myenvironment').addClass("current");
-  $('#home').removeClass("current");
-  $('#home').addClass("top");
-});

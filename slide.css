@@ -12,7 +12,13 @@
           transition-timing-function: ease;
 }
 
-
+#home-background {
+  height:100%;
+  overflow: hidden;
+  width:100%;
+  background-color: black;
+  position:absolute;
+}
 .current {
   top: 0;
   bottom: 0;
